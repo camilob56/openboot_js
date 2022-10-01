@@ -1,5 +1,5 @@
 function verdadero () {
-    console.log('True');
+    return true
 }
 
 async function delayPromesa() {
@@ -7,18 +7,17 @@ async function delayPromesa() {
 } 
 
 function* genera () {
-    let id = 0;
-    while(true){
-        id++ 
-        id++
-        if (id === 50) {
-            return id
-        }
-        yield id
+    let id = 0
+    while(true) {
+        yield id += 2
     }
 }
 
 const par = genera();
+console.log(par.next().value);
+console.log(par.next().value);
+console.log(par.next().value);
+console.log(par.next().value);
 console.log(par.next().value);
 console.log(par.next().value);
 console.log(par.next().value);
