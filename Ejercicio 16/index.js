@@ -43,8 +43,7 @@ papeleraR.forEach(papelera => {
     papelera.addEventListener('drop', event => {
         console.log('Drop');
         const idParrafo = event.dataTransfer.getData('id');
-        const parrafo = document.getElementById(idParrafo);
-        papelera.appendChild(parrafo);
+        document.getElementById(idParrafo).remove()
     })
 
 })
